@@ -34,18 +34,20 @@
                 ':comment' => $comment
             ]);
 
+            echo "<h2>Merci pour votre avis, $name !</h2>";
+        
+            echo '<b>Nom : </b>'.$name.'<br>';
+            echo '<b>Service : </b>'.$service.'⭐<br>';
+            echo '<b>Ambience : </b>'.$ambiance.'⭐<br>';
+            echo '<b>Nourriture : </b>'.$food.'⭐<br>';
+            echo '<b>Situation : </b>'.$situation.'<br>';
+            echo '<b>Commentaire : </b>'.$comment; 
+
         }catch(PDOException $e) {
             die("Une erreur est survenue lors de l'insertion.");
         }
 
-        echo "<h2>Merci pour votre avis, $name !</h2>";
-        
-        echo '<b>Nom : </b>'.htmlspecialchars($_POST['name']).'<br>';
-        echo '<b>Service : </b>'.$_POST['service-stars'].'⭐<br>';
-        echo '<b>Ambience : </b>'.$_POST['ambiance-stars'].'⭐<br>';
-        echo '<b>Nourriture : </b>'.$_POST['food-stars'].'⭐<br>';
-        echo '<b>Situation : </b>'.$_POST['situation'].'<br>';
-        echo '<b>Commentaire : </b>'.htmlspecialchars($_POST['review']);   
+          
     ?>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<form action="../includes/form.php" method="post">
+<form action="../includes/review_proccess" method="post">
     <fieldset class="border rounded-3 p-4 mb-4 bg-white shadow-sm">
 
         <div class="row g-3 mb-3">

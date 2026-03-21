@@ -41,12 +41,16 @@ Le projet inclut la gestion des avis clients et une architecture web complète, 
     - /preview
 - /config
   - database.php
+- /docs
+  - (comptes rendus PDF - voir ci-dessous)
 - /includes
   - footer.php
-  - form.php
+  - review_form.php
   - header.php
+  - reservation_process.php
 - /public
   - /js
+    - review-form.js
     - script.js
   - /pages
     - about.php
@@ -56,6 +60,14 @@ Le projet inclut la gestion des avis clients et une architecture web complète, 
     - reservation.php
   - index.php
 - README.md
+
+---
+
+## 📄 Comptes rendus
+
+Les comptes rendus du projet (suivis de développement, documentation technique) sont disponibles dans le dossier [`/docs`](./docs).
+
+---
 
 ## ✨ Fonctionnalités principales
 

@@ -54,6 +54,16 @@
 
         <div class="text-center small text-white-50">
           © 2025 L'Herbier des Mots. Tous droits réservés.
+          <br>
+          <?php if (isset($_SESSION['firstname'])){ ?>
+            <span>
+                Vous avez visité ce site <?php echo $visit_count ?> fois.
+            </span>
+          <?php }else { ?>
+            <span>
+                Vous n'avez pas encore visité ce site. Renseignez votre prénom pour activer le suivi de vos visites.
+            </span>
+          <?php } ?>
         </div>
     </div>
 </footer>

@@ -1,3 +1,23 @@
+<?php
+  session_start();
+
+  if (isset($_SESSION['firstname']) && !isset($_SESSION['already_counted'])) {
+      if (isset($_COOKIE['visit_count'])) {
+          $visit_count = (int)$_COOKIE['visit_count'] + 1;
+      } else {
+          $visit_count = 1;
+      }
+      setcookie('visit_count', $visit_count, time() + 30 * 24 * 3600);
+      $_SESSION['already_counted'] = true;
+  } else {
+      if (isset($_COOKIE['visit_count'])) {
+          $visit_count = (int)$_COOKIE['visit_count'];
+      } else {
+          $visit_count = 0;
+      }
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>

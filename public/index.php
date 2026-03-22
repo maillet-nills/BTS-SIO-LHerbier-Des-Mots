@@ -1,3 +1,26 @@
+<?php
+  session_start();
+  if (!empty($_POST['firstname'])) {
+    $_SESSION['firstname'] = htmlspecialchars(trim($_POST['firstname']));
+  }
+
+  if (isset($_SESSION['firstname']) && !isset($_SESSION['already_counted'])) {
+    if (isset($_COOKIE['visit_count'])) {
+        $visit_count = (int)$_COOKIE['visit_count'] + 1;
+    } else {
+        $visit_count = 1;
+    }
+      setcookie('visit_count', $visit_count, time() + 30 * 24 * 3600);
+      $_SESSION['already_counted'] = true;
+  } else {
+      if (isset($_COOKIE['visit_count'])) {
+          $visit_count = (int)$_COOKIE['visit_count'];
+      } else {
+          $visit_count = 0;
+      }
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -56,6 +79,12 @@
                 thé. Un lieu chill et cocooning, pensé pour lire, se poser et
                 savourer l’instant.
               </p>
+              <?php if (!isset($_SESSION['firstname'])){ ?>
+                    <form method="POST" action="" class="d-flex gap-2 mt-3">
+                        <input type="text" name="firstname" class="form-control" placeholder="Votre prénom">
+                        <button type="submit" class="btn btn-success">Valider</button>
+                    </form>
+                <?php } ?>
             </div>
             <div class="col-md-6">
               <img

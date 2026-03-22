@@ -66,9 +66,6 @@
           <div class="row align-items-center">
             <div class="col-md-6 mx-auto">
               <h2 class="text-center mb-5 fw-bold">Prendre une réservation</h2>
-              <?php if ($message): ?>
-                <div class="alert alert-success"><?= $alert ?></div>
-              <?php endif; ?>
               <form action="../../includes/reservation_process.php" method="POST">
                 <fieldset class="border rounded-3 p-4 mb-4 bg-white shadow-sm">
                   <div class="row g-1 mb-1">

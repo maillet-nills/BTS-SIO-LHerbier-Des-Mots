@@ -34,7 +34,7 @@
             echo "<h2>Merci pour votre réservation, ".$name." !</h2>";
         
             echo '<b>Nom : </b>'.$name.'<br>';
-            echo '<b>Mail : </b>'.$mail.'<br>';
+            echo '<b>Mail : </b>'.$email.'<br>';
             echo '<b>Date : </b>'.$reservation_date.'<br>';
             echo '<b>Horaire : </b>'.$reservation_time.'<br>';
             echo '<b>Nombre de personnes : </b>'.$guests.'<br>';
